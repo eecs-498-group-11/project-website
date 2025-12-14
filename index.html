@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback Extensions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            padding-bottom: 20px;
+        }
+        .content-section {
+            padding: 20px;
+            margin-top: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #0779e4;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .member-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .member-card {
+            text-align: center;
+            width: 150px;
+        }
+        .member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0779e4;
+        }
+        .links-grid {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            background-color: #e2e2e8;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .links-grid a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            border: 2px solid #0779e4;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .links-grid a:hover {
+            background-color: #0779e4;
+            color: #fff;
+        }
+        .figure {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .figure-caption {
+            font-style: italic;
+            margin-top: 10px;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            color: #fff;
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback Extensions</h1>
+            <p>EECS 498 Final Project - Group 11</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="links-grid">
+            <a href="files/RLRE_Final_Report.pdf" target="_blank">📄 Final Report (PDF)</a>
+            <a href="files/software_package.tar.gz">📦 Software Package (.tar.gz)</a>
+            <a href="files/presentation_slides.pdf" target="_blank">💻 Presentation Slides</a>
+            <a href="https://github.com/eecs-498-group-11/RL-VLM-F" target="_blank">🐙 GitHub Repository</a>
+        </div>
+
+        <div class="content-section">
+            <h2>👥 Group Members</h2>
+            <div class="member-grid">
+                <div class="member-card">
+                    <img src="files/members/cczarnik.jpg" alt="Colin Czarnik">
+                    <p>Colin Czarnik</p>
+                </div>
+                <div class="member-card">
+                    <img src="files/members/cakorzenowski.jpg" alt="Carter Korzenowski">
+                    <p>Carter Korzenowski</p>
+                </div>
+                <div class="member-card">
+                    <img src="files/members/lmalek.jpg" alt="Layne Malek">
+                    <p>Layne Malek</p>
+                </div>
+                <div class="member-card">
+                    <img src="files/members/tjneuenfeldt.jpg" alt="TJ Neuenfeldt">
+                    <p>TJ Neuenfeldt</p>
+                </div>
+                <div class="member-card">
+                    <img src="files/members/jpatel.jpg" alt="Jehan Patel">
+                    <p>Jehan Patel</p>
+                </div>
+                <div class="member-card">
+                    <img src="files/members/aynag.jpg" alt="Arthur Yang">
+                    <p>Arthur Yang</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>📜 Project Summary & Results</h2>
+            
+            <p>
+                The challenge of designing effective reward functions is a long-standing issue in Reinforcement Learning (RL). The recent work, **RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback**, addresses this by using Vision-Language Models (VLMs), conditioned on task descriptions and visual observations, to generate preference-based reward signals. Our project successfully replicated the core RL-VLM-F method and explored two key extensions to improve its performance and capability in robotic scenarios.
+            </p>
+
+            <h3>Core Replication</h3>
+            <p>
+                We successfully replicated the core results of RL-VLM-F for three MetaWorld environments (Drawer Open, Soccer, Sweep Into), confirming that VLM-based preference feedback can serve as a robust substitute for manual reward engineering. Our results demonstrated that RL-VLM-F can outperform popular baselines like CLIP Score and VLM Score and achieve performance comparable to ground-truth rewards.
+            </p>
+            <div class="figure">
+                <img src="files/figures/replication_results.jpg" alt="Replication Results Figure 1">
+                <p class="figure-caption">Figure: Replicated learning curves for MetaWorld environments, showing RL-VLM-F success rates (Figure 1 in Report).</p>
+            </div>
+
+            <h3>Extension A: Tournament-Style Comparison</h3>
+            <p>
+                **Intuition:** The original pairwise comparison limits the information gained per VLM query. We hypothesized that comparing three images in a tournament-style format would provide a more informative signal about the task space, thereby accelerating convergence.
+            </p>
+            <p>
+                **Finding:** The tournament-style comparison demonstrated faster convergence and achieved success rates similar to or exceeding the original pairwise comparison in the tested MetaWorld environments, especially in the Soccer task. This suggests that expanding the comparison set is an effective method for speeding up the learning process.
+            </p>
+            <div class="figure">
+                <img src="files/figures/tournament_results.jpg" alt="Tournament Results Figure 3">
+                <p class="figure-caption">Figure: Learning curves using Tournament-Style Comparison. The method shows faster convergence in some tasks (Figure 3 in Report).</p>
+            </div>
+
+            <h3>Extension B: Multi-Objective RL (MORL) with Metadata</h3>
+            <p>
+                **Intuition:** The original RL-VLM-F only considers task completion. We aimed to increase task complexity by adding an efficiency constraint: minimal robot arm movement. We achieved this by incorporating the robot's positional metadata (total arm movement) directly into the VLM prompt alongside a modified task description.
+            </p>
+            <div class="figure">
+                <img src="files/figures/metadata_prompt.jpg" alt="Metadata Prompt Figure 4">
+                <p class="figure-caption">Figure: Modified prompting structure to include metadata (total movement) and a secondary objective (minimal movement) (Figure 4 in Report).</p>
+            </div>
+            <p>
+                **Finding:** Our results showed that VLMs are capable of producing preferences that trade off success and an efficiency constraint objective. For the **Sweep Into** task, the policy trained with metadata achieved a similar final success rate as the original method but with **lower total robot arm movement**, demonstrating that VLMs can effectively handle multi-objective goals when provided with relevant metadata.
+            </p>
+            <div class="figure">
+                <img src="files/figures/morl_results.jpg" alt="MORL Results Figure 5">
+                <p class="figure-caption">Figure: Success Rate and Total Movement curves for MORL. Note the trade-off in the Sweep environment (Figure 5 in Report).</p>
+            </div>
+
+            <h2>🚀 Conclusion and Future Work</h2>
+            <p>
+                We successfully demonstrated that RL-VLM-F is a powerful approach for automating reward engineering. Our extensions further improved this method by accelerating policy convergence through **Tournament-Style Comparison** and expanding its capabilities to **Multi-Objective Reinforcement Learning** by integrating robot metadata into the VLM feedback. Future work includes testing the optimal number of images for comparison, utilizing temporal data (sequences of images) instead of single snapshots, and evaluating the metadata-augmented approach on more complex, real-world environments.
+            </p>
+
+            <p>
+                This work contributes to making RL development more scalable and accessible by reducing the reliance on extensive, hand-crafted reward signals.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Machine Learning Research Experience (EECS 498). University of Michigan.</p>
+    </footer>
+</body>
+</html>
