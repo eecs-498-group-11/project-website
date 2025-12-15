@@ -3,215 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback Extensions</title>
+    <title>RL-VLM-F Extensions | EECS 498 Final Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            width: 85%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #0779e4 3px solid;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            padding-bottom: 20px;
-        }
-        .content-section {
-            padding: 20px;
-            margin-top: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h2 {
-            color: #0779e4;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .member-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .member-card {
-            text-align: center;
-            width: 150px;
-        }
-        .member-card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #0779e4;
-        }
-        .links-grid {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px 0;
-            background-color: #e2e2e8;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .links-grid a {
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            padding: 10px 15px;
-            border: 2px solid #0779e4;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .links-grid a:hover {
-            background-color: #0779e4;
-            color: #fff;
-        }
-        .figure {
-            text-align: center;
-            margin: 30px 0;
-        }
-        .figure img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .figure-caption {
-            font-style: italic;
-            margin-top: 10px;
-            color: #555;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
-            color: #fff;
-            background: #333;
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            /* Using a darker blue gradient theme for EECS project */
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback Extensions</h1>
-            <p>EECS 498 Final Project - Group 11</p>
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="hero-bg text-white py-12 shadow-lg">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-blue-200 font-semibold tracking-wide uppercase text-sm mb-2">EECS 498 &bull; Group 11 Final Project</p>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback 
+                <span class="text-blue-300">Extensions</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+                Improving policy convergence and supporting multi-objective goals using tournament-style preference labeling and robot metadata augmentation.
+            </p>
+            
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#deliverables" class="bg-white text-blue-900 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition shadow-md">
+                    Download Deliverables
+                </a>
+                <a href="https://github.com/eecs-498-group-11/RL-VLM-F" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition shadow-md border border-blue-500">
+                    View GitHub Repository
+                </a>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        
-        <div class="links-grid">
-            <a href="files/RLRE_Final_Report.pdf" target="_blank">📄 Final Report (PDF)</a>
-            <a href="files/software_package.tar.gz">📦 Software Package (.tar.gz)</a>
-            <a href="files/presentation_slides.pdf" target="_blank">💻 Presentation Slides</a>
-            <a href="https://github.com/eecs-498-group-11/RL-VLM-F" target="_blank">🐙 GitHub Repository</a>
-        </div>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Project Team</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+                
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <img src="files/members/cczarnik.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Colin+Czarnik&background=0D8ABC&color=fff'" alt="Colin Czarnik" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Colin Czarnik</h3>
+                    <p class="text-blue-600 text-sm">cczar@umich.edu</p>
+                </div>
 
-        <div class="content-section">
-            <h2>👥 Group Members</h2>
-            <div class="member-grid">
-                <div class="member-card">
-                    <img src="files/members/cczarnik.jpg" alt="Colin Czarnik">
-                    <p>Colin Czarnik</p>
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <img src="files/members/cakorzenowski.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Carter+Korzenowski&background=0D8ABC&color=fff'" alt="Carter Korzenowski" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Carter Korzenowski</h3>
+                    <p class="text-blue-600 text-sm">cakorzen@umich.edu</p>
                 </div>
-                <div class="member-card">
-                    <img src="files/members/cakorzenowski.jpg" alt="Carter Korzenowski">
-                    <p>Carter Korzenowski</p>
+
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <img src="files/members/lmalek.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Layne+Malek&background=0D8ABC&color=fff'" alt="Layne Malek" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Layne Malek</h3>
+                    <p class="text-blue-600 text-sm">lmalek@umich.edu</p>
                 </div>
-                <div class="member-card">
-                    <img src="files/members/lmalek.jpg" alt="Layne Malek">
-                    <p>Layne Malek</p>
+                
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <img src="files/members/tjneuenfeldt.jpg" onerror="this.src='https://ui-avatars.com/api/?name=TJ+Neuenfeldt&background=0D8ABC&color=fff'" alt="TJ Neuenfeldt" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">TJ Neuenfeldt</h3>
+                    <p class="text-blue-600 text-sm">tjneu@umich.edu</p>
                 </div>
-                <div class="member-card">
-                    <img src="files/members/tjneuenfeldt.jpg" alt="TJ Neuenfeldt">
-                    <p>TJ Neuenfeldt</p>
+
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <img src="files/members/jpatel.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Jehan+Patel&background=0D8ABC&color=fff'" alt="Jehan Patel" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Jehan Patel</h3>
+                    <p class="text-blue-600 text-sm">pajehan@umich.edu</p>
                 </div>
-                <div class="member-card">
-                    <img src="files/members/jpatel.jpg" alt="Jehan Patel">
-                    <p>Jehan Patel</p>
+
+                <div class="text-center group">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 shadow-sm group-hover:border-blue-200 transition">
+                        <img src="files/members/aynag.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Arthur+Yang&background=0D8ABC&color=fff'" alt="Arthur Yang" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Arthur Yang</h3>
+                    <p class="text-blue-600 text-sm">yarthur@umich.edu</p>
                 </div>
-                <div class="member-card">
-                    <img src="files/members/aynag.jpg" alt="Arthur Yang">
-                    <p>Arthur Yang</p>
-                </div>
+                
             </div>
         </div>
+    </section>
 
-        <div class="content-section">
-            <h2>📜 Project Summary & Results</h2>
+    <section id="deliverables" class="py-12 bg-slate-100 border-y border-slate-200">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-2xl font-bold mb-6 text-slate-800">Project Deliverables</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                
+                <a href="files/RLRE_Final_Report.pdf" target="_blank" class="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="bg-red-100 p-3 rounded-full mr-4 group-hover:bg-red-200 transition">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Project Report</h4>
+                        <p class="text-xs text-slate-500">ACM SIG Format (PDF)</p>
+                    </div>
+                </a>
+
+                <a href="files/presentation_slides.pdf" target="_blank" class="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="bg-yellow-100 p-3 rounded-full mr-4 group-hover:bg-yellow-200 transition">
+                        <svg class="w-6 h-6 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Presentation Slides</h4>
+                        <p class="text-xs text-slate-500">Slides PDF</p>
+                    </div>
+                </a>
+
+                <a href="files/project_poster.pdf" target="_blank" class="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="bg-yellow-100 p-3 rounded-full mr-4 group-hover:bg-yellow-200 transition">
+                        <svg class="w-6 h-6 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Project Poster</h4>
+                        <p class="text-xs text-slate-500">PDF Document</p>
+                    </div>
+                </a>
+            </div>
             
-            <p>
-                The challenge of designing effective reward functions is a long-standing issue in Reinforcement Learning (RL). The recent work, **RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback**, addresses this by using Vision-Language Models (VLMs), conditioned on task descriptions and visual observations, to generate preference-based reward signals. Our project successfully replicated the core RL-VLM-F method and explored two key extensions to improve its performance and capability in robotic scenarios.
-            </p>
-
-            <h3>Core Replication</h3>
-            <p>
-                We successfully replicated the core results of RL-VLM-F for three MetaWorld environments (Drawer Open, Soccer, Sweep Into), confirming that VLM-based preference feedback can serve as a robust substitute for manual reward engineering. Our results demonstrated that RL-VLM-F can outperform popular baselines like CLIP Score and VLM Score and achieve performance comparable to ground-truth rewards.
-            </p>
-            <div class="figure">
-                <img src="files/figures/replication_results.jpg" alt="Replication Results Figure 1">
-                <p class="figure-caption">Figure: Replicated learning curves for MetaWorld environments, showing RL-VLM-F success rates (Figure 1 in Report).</p>
+            <div class="text-center mt-8">
+                <a href="files/software_package.tar.gz" download class="inline-flex items-center bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition shadow-md">
+                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                     Download Software Package (.tar.gz)
+                </a>
             </div>
 
-            <h3>Extension A: Tournament-Style Comparison</h3>
-            <p>
-                **Intuition:** The original pairwise comparison limits the information gained per VLM query. We hypothesized that comparing three images in a tournament-style format would provide a more informative signal about the task space, thereby accelerating convergence.
-            </p>
-            <p>
-                **Finding:** The tournament-style comparison demonstrated faster convergence and achieved success rates similar to or exceeding the original pairwise comparison in the tested MetaWorld environments, especially in the Soccer task. This suggests that expanding the comparison set is an effective method for speeding up the learning process.
-            </p>
-            <div class="figure">
-                <img src="files/figures/tournament_results.jpg" alt="Tournament Results Figure 3">
-                <p class="figure-caption">Figure: Learning curves using Tournament-Style Comparison. The method shows faster convergence in some tasks (Figure 3 in Report).</p>
-            </div>
+        </div>
+    </section>
 
-            <h3>Extension B: Multi-Objective RL (MORL) with Metadata</h3>
-            <p>
-                **Intuition:** The original RL-VLM-F only considers task completion. We aimed to increase task complexity by adding an efficiency constraint: minimal robot arm movement. We achieved this by incorporating the robot's positional metadata (total arm movement) directly into the VLM prompt alongside a modified task description.
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
+        
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Abstract / Summary</h2>
+            <p class="text-slate-700 leading-relaxed text-lg">
+                Learning effective reward functions in Reinforcement Learning (RL) remains a major hurdle, especially in complex robotic tasks. The recent work **RL-VLM-F** demonstrated that Vision-Language Models (VLMs) could provide high-quality, preference-based reward signals using task descriptions and visual observations. Our project successfully replicates this core finding and introduces two novel extensions to enhance the method's efficiency and flexibility:
             </p>
-            <div class="figure">
-                <img src="files/figures/metadata_prompt.jpg" alt="Metadata Prompt Figure 4">
-                <p class="figure-caption">Figure: Modified prompting structure to include metadata (total movement) and a secondary objective (minimal movement) (Figure 4 in Report).</p>
-            </div>
-            <p>
-                **Finding:** Our results showed that VLMs are capable of producing preferences that trade off success and an efficiency constraint objective. For the **Sweep Into** task, the policy trained with metadata achieved a similar final success rate as the original method but with **lower total robot arm movement**, demonstrating that VLMs can effectively handle multi-objective goals when provided with relevant metadata.
-            </p>
-            <div class="figure">
-                <img src="files/figures/morl_results.jpg" alt="MORL Results Figure 5">
-                <p class="figure-caption">Figure: Success Rate and Total Movement curves for MORL. Note the trade-off in the Sweep environment (Figure 5 in Report).</p>
-            </div>
-
-            <h2>🚀 Conclusion and Future Work</h2>
-            <p>
-                We successfully demonstrated that RL-VLM-F is a powerful approach for automating reward engineering. Our extensions further improved this method by accelerating policy convergence through **Tournament-Style Comparison** and expanding its capabilities to **Multi-Objective Reinforcement Learning** by integrating robot metadata into the VLM feedback. Future work includes testing the optimal number of images for comparison, utilizing temporal data (sequences of images) instead of single snapshots, and evaluating the metadata-augmented approach on more complex, real-world environments.
-            </p>
-
-            <p>
-                This work contributes to making RL development more scalable and accessible by reducing the reliance on extensive, hand-crafted reward signals.
+            <ul class="list-disc pl-5 space-y-2 text-slate-700 mt-4 ml-4">
+                <li>**Tournament-Style Preference Labeling:** To improve convergence speed by extracting richer information from each VLM query.</li>
+                <li>**Multi-Objective RL via Metadata Augmentation:** To enable the VLM to handle complex constraints (e.g., task success AND movement efficiency) by incorporating robot metadata (end-effector movement) directly into the preference prompt.</li>
+            </ul>
+            <p class="text-slate-700 leading-relaxed text-lg mt-4">
+                We find that the tournament approach is faster than the original method and that metadata augmentation successfully enables the learning of trade-off policies, paving the way for more nuanced VLM-guided robotic learning.
             </p>
         </div>
-    </div>
 
-    <footer>
-        <p>&copy; 2025 Machine Learning Research Experience (EECS 498). University of Michigan.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Extension A: Tournament-Style Preference Labeling</h2>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    The original RL-VLM-F uses a pairwise comparison to determine preferences (Image A vs. Image B). We proposed a **tournament-style comparison** where the VLM ranks three images simultaneously.
+                </p>
+                <p class="text-slate-700 leading-relaxed">
+                    **Intuition:** By comparing multiple trajectories, the VLM can provide a more informative signal about the quality gradient in the environment, which should accelerate policy convergence. Our experiments confirm this: the tournament approach showed **faster learning** and achieved comparable or superior success rates, particularly in the MetaWorld **Soccer** task.
+                </p>
+            </div>
+            <div class="bg-white p-2 rounded-lg shadow-md border border-slate-200">
+                <img src="files/figures/tournament_results.jpg" alt="Tournament Results Figure" class="w-full rounded">
+                <p class="text-sm text-slate-500 mt-2 text-center italic">Figure: Learning curves comparing Pairwise vs. Tournament-Style Comparison (Extension A).</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
+             <div class="bg-white p-2 rounded-lg shadow-md border border-slate-200 order-2 md:order-1">
+                <img src="files/figures/morl_results.jpg" alt="MORL Results Figure" class="w-full rounded">
+                <p class="text-sm text-slate-500 mt-2 text-center italic">Figure: Multi-Objective RL (MORL) results. The green line shows a trade-off policy: similar success with lower total movement (Extension B).</p>
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Extension B: Multi-Objective RL (MORL)</h2>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Robotic tasks often require optimizing for multiple objectives, like success and efficiency. We tackled this by augmenting the VLM input with **robot metadata** (total end-effector movement) and modifying the objective to favor minimal movement while still completing the task.
+                </p>
+                <p class="text-slate-700 leading-relaxed">
+                    **Finding:** By providing the VLM with quantitative metadata, we demonstrated that it can generate preference labels that reflect a multi-objective trade-off. For the **Sweep Into** environment, the resulting policy achieved the desired success rate while significantly reducing the total distance the robotic arm moved.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Conclusion & Future Work</h2>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
+                <ul class="list-disc pl-5 space-y-2 text-slate-800">
+                    <li>**Replication Success:** We successfully replicated the core RL-VLM-F method.</li>
+                    <li>**Accelerated Learning:** Tournament-style comparisons prove to be a viable strategy for faster policy convergence.</li>
+                    <li>**Expanded Capability:** The VLM's ability to incorporate external, non-visual metadata is crucial for scaling RL-VLM-F to complex, multi-constrained real-world tasks.</li>
+                </ul>
+            </div>
+
+            <p class="text-slate-700 leading-relaxed">
+                Future work involves exploring the optimal size for the tournament comparison, investigating the use of temporal (video) data instead of single snapshots, and applying the metadata augmentation technique to more complex tasks with real-world physical constraints.
+            </p>
+        </div>
+        
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 EECS 498 Group 11. University of Michigan.</p>
+        </div>
     </footer>
+
 </body>
 </html>
