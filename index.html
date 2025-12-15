@@ -24,7 +24,7 @@
                 <span class="text-blue-300">Extensions</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
-                Improving policy convergence and supporting multi-objective goals using tournament-style preference labeling and robot metadata augmentation.
+                Improving policy convergence and supporting multi-objective goals using tournament-style preference labeling and robot metadata augmentation
             </p>
             
             <div class="mt-8 flex flex-wrap justify-center gap-4">
@@ -149,8 +149,8 @@
                 Learning effective reward functions in Reinforcement Learning (RL) remains a major hurdle, especially in complex robotic tasks. The recent work <strong>RL-VLM-F</strong> demonstrated that Vision-Language Models (VLMs) could provide high-quality, preference-based reward signals using task descriptions and visual observations. Our project successfully replicates this core finding and introduces two novel extensions to enhance the method's efficiency and flexibility:
             </p>
             <ul class="list-disc pl-5 space-y-2 text-slate-700 mt-4 ml-4">
-                <li><strong>Tournament-Style Preference Labeling:</strong> To improve convergence speed by extracting richer information from each VLM query.</li>
-                <li><strong>Multi-Objective RL via Metadata Augmentation:</strong> To enable the VLM to handle complex constraints (e.g., task success AND movement efficiency) by incorporating robot metadata (end-effector movement) directly into the preference prompt.</li>
+                <li><strong>Tournament-Style Preference Labeling:</strong> To improve convergence speed by extracting richer information from each VLM query</li>
+                <li><strong>Multi-Objective RL via Metadata Augmentation:</strong> To enable the VLM to handle complex constraints (e.g., task success AND movement efficiency) by incorporating robot metadata (end-effector movement) directly into the preference prompt</li>
             </ul>
             <p class="text-slate-700 leading-relaxed text-lg mt-4">
                 We find that the tournament approach is faster than the original method and that metadata augmentation successfully enables the learning of trade-off policies, paving the way for more nuanced VLM-guided robotic learning.
@@ -173,36 +173,38 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
-             <div class="bg-white p-2 rounded-lg shadow-md border border-slate-200 order-2 md:order-1">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start">
+            <div class="flex flex-col gap-6">
+            <div class="bg-white p-2 rounded-lg shadow-md border border-slate-200">
+                <img src="files/figures/morl_prompt.jpg" alt="Modified RL-VLM-F Prompt" class="w-full rounded">
+                <p class="text-sm text-slate-500 mt-2 text-center italic">Figure: Modified prompting structure to include metadata, with changes in blue text (Extension B).</p>
+            </div>
+            <div class="bg-white p-2 rounded-lg shadow-md border border-slate-200">
                 <img src="files/figures/morl_results.jpg" alt="MORL Results Figure" class="w-full rounded">
                 <p class="text-sm text-slate-500 mt-2 text-center italic">Figure: Multi-Objective RL (MORL) results. The green line shows a trade-off policy: similar success with lower total movement (Extension B).</p>
             </div>
-            <div class="order-1 md:order-2">
-                <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Extension B: Multi-Objective RL (MORL)</h2>
-                <p class="text-slate-700 leading-relaxed mb-4">
-                    Robotic tasks often require optimizing for multiple objectives, like success and efficiency. We tackled this by augmenting the VLM input with <strong>robot metadata</strong> (total end-effector movement) and modifying the objective to favor minimal movement while still completing the task.
-                </p>
-                <p class="text-slate-700 leading-relaxed">
-                    <strong>Finding:</strong> By providing the VLM with quantitative metadata, we demonstrated that it can generate preference labels that reflect a multi-objective trade-off. For the <strong>Sweep Into</strong> environment, the resulting policy achieved the desired success rate while significantly reducing the total distance the robotic arm moved.
-                </p>
+            </div>
+            <div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Extension B: Multi-Objective RL (MORL)</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                Robotic tasks often require optimizing for multiple objectives, like success and efficiency. We tackled this by augmenting the VLM input with <strong>robot metadata</strong> (total end-effector movement) and modifying the objective to favor minimal movement while still completing the task.
+            </p>
+            <p class="text-slate-700 leading-relaxed">
+                <strong>Finding:</strong> By providing the VLM with quantitative metadata, we demonstrated that it can generate preference labels that reflect a multi-objective trade-off. For the <strong>Sweep Into</strong> environment, the resulting policy achieved the desired success rate while significantly reducing the total distance the robotic arm moved.
+            </p>
             </div>
         </div>
 
         <div class="mb-16">
             <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-blue-600 pl-4">Conclusion & Future Work</h2>
-            
             <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
                 <ul class="list-disc pl-5 space-y-2 text-slate-800">
                     <li><strong>Replication Success:</strong> We successfully replicated the core RL-VLM-F method.</li>
                     <li><strong>Accelerated Learning:</strong> Tournament-style comparisons prove to be a viable strategy for faster policy convergence.</li>
                     <li><strong>Expanded Capability:</strong> The VLM's ability to incorporate external, non-visual metadata is crucial for scaling RL-VLM-F to complex, multi-constrained real-world tasks.</li>
+                    <li><strong>Future Work:</strong> We will continue exploring the optimal size for the tournament comparison, investigating the use of temporal (video) data instead of single snapshots, and applying the metadata augmentation technique to more complex tasks with real-world physical constraints.</li>
                 </ul>
             </div>
-
-            <p class="text-slate-700 leading-relaxed">
-                Future work involves exploring the optimal size for the tournament comparison, investigating the use of temporal (video) data instead of single snapshots, and applying the metadata augmentation technique to more complex tasks with real-world physical constraints.
-            </p>
         </div>
 
         <!-- Repo Links -->
